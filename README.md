@@ -38,3 +38,19 @@ cdk diff
 # (7) Deleting the stack
 cdk destroy
 ```
+
+### (3) Tips
+
+Make sure that the version of the modules are the same. Otherwise, we get type error.
+
+For example, all the modules has to have the same version as @aws-cdk/core. If they are different, you may get error.
+
+```
+"@aws-cdk/assert": "1.55.0",
+"@aws-cdk/aws-iam": "1.55.0",
+"@aws-cdk/aws-kinesis": "1.55.0",
+"@aws-cdk/aws-kinesisfirehose": "1.55.0",
+"@aws-cdk/aws-logs": "1.55.0",
+"@aws-cdk/aws-s3": "1.55.0",
+"@aws-cdk/core": "1.55.0",
+```

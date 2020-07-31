@@ -1,9 +1,9 @@
-import { Construct } from '@aws-cdk/core';
+import * as cdk from '@aws-cdk/core';
 import * as s3 from '@aws-cdk/aws-s3';
 
-export class S3Bucket extends Construct {
+export class S3Bucket extends cdk.Construct {
 
-  constructor(parent: Construct, id: string) {
+  constructor(parent: cdk.Construct, id: string) {
     super(parent, id);
     new s3.Bucket(this, 'firehose-target-test');
   }
